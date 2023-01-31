@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.dlh.movieutils.bean.Tv" />
+        <variable
+            name="itemClickListener"
+            type="com.dlh.movieutils.ui.page.home.content.ContentViewModel.OnItemClickListener" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:onClick="@{() -> itemClickListener.onItemClick(item)}"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:id="@+id/item_tv_iv"
+                android:layout_width="@dimen/qb_px_120"
+                android:layout_height="@dimen/qb_px_160"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:imageUrl="@{item.imageUrl}"
+                app:imageSize="@{item.imageSize}"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/a_100104588_m_601_m4"
+                />
+            <TextView
+                android:id="@+id/item_tv_update_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@color/gray_20"
+                android:padding="@dimen/qb_px_4"
+                app:layout_constraintLeft_toLeftOf="@id/item_tv_iv"
+                app:layout_constraintRight_toRightOf="@id/item_tv_iv"
+                app:layout_constraintBottom_toBottomOf="@id/item_tv_iv"
+                numbers="@{item}"
+                tools:text="全集"
+                />
+            <TextView
+                android:id="@+id/item_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lines="2"
+                android:ellipsize="end"
+                android:textColor="@color/black"
+                tools:text="摧毁"
+                android:text="@{item.title}"
+                android:layout_margin="@dimen/qb_px_4"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/item_tv_iv" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

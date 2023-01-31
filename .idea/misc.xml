@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../../../layout/custom_preview.xml" value="0.1" />
+        <entry key="../../../../.gradle/caches/transforms-3/b7cdc5c1453a7e1579f6238be628b37b/transformed/appcompat-1.3.0/res/layout/support_simple_spinner_dropdown_item.xml" value="0.146875" />
+        <entry key="../../sdk/platforms/android-32/data/res/layout/simple_spinner_dropdown_item.xml" value="0.23505434782608695" />
+        <entry key="app/src/main/res/drawable/bg_home_search.xml" value="0.1415" />
+        <entry key="app/src/main/res/drawable/bg_reload_btn.xml" value="0.12" />
+        <entry key="app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.1105" />
+        <entry key="app/src/main/res/drawable/ic_jxpaly_black_24dp.xml" value="0.1185" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1185" />
+        <entry key="app/src/main/res/drawable/ic_me_black_24dp.xml" value="0.1185" />
+        <entry key="app/src/main/res/drawable/ic_menu_camera.xml" value="0.1185" />
+        <entry key="app/src/main/res/drawable/ic_menu_gallery.xml" value="0.1185" />
+        <entry key="app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.1185" />
+        <entry key="app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.1465" />
+        <entry key="app/src/main/res/drawable/rv_item_bg.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/rv_item_bg_stroke_w.xml" value="0.142" />
+        <entry key="app/src/main/res/drawable/rv_item_bg_stroke_white.xml" value="0.142" />
+        <entry key="app/src/main/res/drawable/rv_item_checked_bg.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/side_nav_bar.xml" value="0.1185" />
+        <entry key="app/src/main/res/layout-land/activity_paly_details.xml" value="0.1318342151675485" />
+        <entry key="app/src/main/res/layout-land/fragment_content.xml" value="0.10052910052910052" />
+        <entry key="app/src/main/res/layout-land/movie_land_episodes_rv_item_layout.xml" value="0.13315696649029982" />
+        <entry key="app/src/main/res/layout-land/movie_land_layout.xml" value="0.15828924162257496" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.15" />
+        <entry key="app/src/main/res/layout/activity_multiple_status.xml" value="0.13697916666666668" />
+        <entry key="app/src/main/res/layout/activity_paly.xml" value="0.19270833333333334" />
+        <entry key="app/src/main/res/layout/activity_paly_details.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/app_bar_paly_details.xml" value="0.11197916666666667" />
+        <entry key="app/src/main/res/layout/content_paly_details.xml" value="0.11197916666666667" />
+        <entry key="app/src/main/res/layout/custom_list_drawer.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/demo_fragment.xml" value="0.13697916666666668" />
+        <entry key="app/src/main/res/layout/empty.xml" value="0.13697916666666668" />
+        <entry key="app/src/main/res/layout/error.xml" value="0.1984375" />
+        <entry key="app/src/main/res/layout/fragment_content.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_content_rv_item.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/fragment_jxpaly.xml" value="0.14375" />
+        <entry key="app/src/main/res/layout/fragment_me.xml" value="0.1359375" />
+        <entry key="app/src/main/res/layout/fragment_movie.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_paly.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_paly_details.xml" value="0.1984375" />
+        <entry key="app/src/main/res/layout/item_parser_spinner_adapter_item_layout.xml" value="0.146875" />
+        <entry key="app/src/main/res/layout/layout_empty.xml" value="0.15052083333333333" />
+        <entry key="app/src/main/res/layout/layout_error.xml" value="0.15052083333333333" />
+        <entry key="app/src/main/res/layout/layout_loading.xml" value="0.15208333333333332" />
+        <entry key="app/src/main/res/layout/loading.xml" value="0.1984375" />
+        <entry key="app/src/main/res/layout/main_activity.xml" value="0.18229166666666666" />
+        <entry key="app/src/main/res/layout/main_fragment.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/movie_land_episodes_rv_item_layout.xml" value="0.15729166666666666" />
+        <entry key="app/src/main/res/layout/movie_land_layout.xml" value="0.18697916666666667" />
+        <entry key="app/src/main/res/layout/rv_item_epsode_layout.xml" value="0.165" />
+        <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.11197916666666667" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.1484375" />
+        <entry key="app/src/main/res/menu/paly_details.xml" value="0.11197916666666667" />
+        <entry key="dlhlibrary/src/main/res/layout/empty.xml" value="0.22395833333333334" />
+        <entry key="dlhlibrary/src/main/res/layout/error.xml" value="0.15052083333333333" />
+        <entry key="dlhlibrary/src/main/res/layout/loading.xml" value="0.223731884057971" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

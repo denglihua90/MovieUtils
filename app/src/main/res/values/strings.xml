@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">MovieUtils</string>
+    <string name="btn_text_paste">PasteAddres</string>
+    <string name="btn_text_play">PlayMovie</string>
+
+    <string name="title_home">home</string>
+    <string name="title_jxpaly">jxpaly</string>
+    <string name="title_me">me</string>
+    <string name="title_paly_details">palyDetails</string>
+
+    <string name="text_movie_source">source</string>
+    <string name="text_movie_episodes">episodes</string>
+
+    <string-array name="tabsArray">
+        <item>电视剧</item>
+        <item>电影</item>
+        <item>动漫</item>
+        <item>综艺</item>
+    </string-array>
+
+</resources>

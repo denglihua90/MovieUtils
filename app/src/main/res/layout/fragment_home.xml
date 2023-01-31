@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+
+        <variable
+            name="vm"
+            type="com.dlh.movieutils.ui.page.home.HomeViewModel" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="fragment"
+            type="com.dlh.movieutils.ui.page.home.HomeFragment" />
+
+        <import type="com.dlh.movieutils.bean.HomeBundleBean" />
+
+        <import type="java.util.ArrayList" />
+
+        <variable
+            name="tabs"
+            type="ArrayList&lt;HomeBundleBean>" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.page.home.HomeFragment">
+
+        <TextView
+            android:id="@+id/home_search_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/qb_px_20"
+            android:layout_marginTop="@dimen/qb_px_10"
+            android:drawableLeft="@android:drawable/ic_menu_search"
+            android:paddingLeft="@dimen/qb_px_10"
+            android:drawablePadding="@dimen/qb_px_10"
+            android:layout_marginRight="@dimen/qb_px_20"
+            android:layout_marginBottom="@dimen/qb_px_10"
+            android:background="@drawable/bg_home_search"
+            android:minHeight="@dimen/qb_px_40"
+            android:text="请输入关键字进行搜索"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/home_tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            app:homefragment="@{fragment}"
+            app:layout_constraintTop_toBottomOf="@+id/home_search_tv"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/purple_500"
+            app:tabIndicatorHeight="@dimen/qb_px_1"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/purple_500"
+            app:tabTextColor="@color/black"
+            app:titles="@{tabs}"
+            tools:ignore="SpeakableTextPresentCheck">
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/home_view_pager2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/home_tab_layout" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

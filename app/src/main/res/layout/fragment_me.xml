@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/qb_px_40"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.page.me.MeFragment">
+
+    <TextView
+        android:id="@+id/home_search_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/qb_px_20"
+        android:layout_marginTop="@dimen/qb_px_10"
+        android:drawableLeft="@android:drawable/ic_menu_search"
+        android:paddingLeft="@dimen/qb_px_10"
+        android:drawablePadding="@dimen/qb_px_10"
+        android:layout_marginRight="@dimen/qb_px_20"
+        android:layout_marginBottom="@dimen/qb_px_10"
+        android:background="@drawable/bg_home_search"
+        android:minHeight="@dimen/qb_px_40"
+        android:text="请输入关键字进行搜索"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/red"
+        android:fitsSystemWindows="true"
+     >
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true">
+                <com.google.android.material.appbar.AppBarLayout
+                    android:id="@+id/appBarLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="256dp"
+                    android:fitsSystemWindows="true"
+                    >
+                    <com.google.android.material.appbar.CollapsingToolbarLayout
+                        android:id="@+id/collapsingToolbarLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray_80"
+                        android:fitsSystemWindows="true"
+                        app:contentScrim="@color/gray_80"
+                        app:expandedTitleMarginEnd="64dp"
+                        app:expandedTitleMarginStart="48dp"
+                        app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                        <androidx.appcompat.widget.Toolbar
+                            android:id="@+id/sortToolbar"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/qb_px_40"
+                            android:fitsSystemWindows="true"
+                            app:contentInsetLeft="0dp"
+                            app:contentInsetStart="0dp"
+                            app:layout_collapseMode="pin"
+                            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                            <TextView
+                                android:id="@+id/sortToolbar_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:textSize="14sp"/>
+                        </androidx.appcompat.widget.Toolbar>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/filter_sort_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fitsSystemWindows="true"
+                            app:layout_collapseMode="none"
+                            app:layout_collapseParallaxMultiplier="0.7"/>
+                    </com.google.android.material.appbar.CollapsingToolbarLayout>
+                </com.google.android.material.appbar.AppBarLayout>
+
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+</LinearLayout>

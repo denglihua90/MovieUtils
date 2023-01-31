@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.dlh.movieutils.ui.page.jx.JxPalyViewModel" />
+        <variable
+            name="mParserSpinnerAdapter"
+            type="com.dlh.movieutils.ui.page.jx.ParserSpinnerAdapter" />
+
+        <variable
+            name="mButtonAction"
+            type="com.dlh.movieutils.ui.page.jx.JxPalyFragment.ButtonAction" />
+        <variable
+            name="mainActivity"
+            type="com.dlh.movieutils.ui.page.MainActivity" />
+        <variable
+            name="mf"
+            type="com.dlh.movieutils.ui.page.jx.JxPalyFragment" />
+
+    </data>
+    <LinearLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="7"
+            tools:context=".ui.page.jx.JxPalyFragment">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/jx_toolbar"
+                app:title="@string/title_jxpaly"
+                android:layout_width="match_parent"
+                android:background="@color/transparent"
+                android:layout_height="wrap_content">
+            </androidx.appcompat.widget.Toolbar>
+            <LinearLayout
+                android:id="@+id/video_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+
+                android:orientation="vertical" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:padding="@dimen/qb_px_12"
+                android:layout_weight="5"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/parser_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/teal_700"
+                    jxAppCompatSpinner="@{viewmodel}"
+                    android:adapter="@{mParserSpinnerAdapter}"
+                    android:minHeight="@dimen/qb_px_48" />
+                <LinearLayout
+                    android:id="@+id/button_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/qb_px_8"
+                    android:layout_marginBottom="@dimen/qb_px_8"
+                    android:weightSum="5"
+                    android:orientation="horizontal">
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_paste"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:minHeight="@dimen/qb_px_48"
+                        android:text="@string/btn_text_paste"
+                        android:layout_height="wrap_content"
+                        />
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="@dimen/qb_px_48"/>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="0dp"
+                        android:id="@+id/btn_play"
+                        android:onClick="@{()->mButtonAction.actionBtnPlay()}"
+                        android:layout_weight="2"
+                        android:text="@string/btn_text_play"
+                        android:minHeight="@dimen/qb_px_48"
+                        android:layout_height="wrap_content"
+                        />
+
+                </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edit_text_url"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:minHeight="@dimen/qb_px_200"
+                        android:background="@color/design_default_color_primary"
+                        android:gravity="start"
+
+                        android:text="@={viewmodel.editUrl}"
+                        tools:text="宝贝宝贝宝贝双方是否看见阿方索九分裤">
+
+                    </androidx.appcompat.widget.AppCompatEditText>
+
+
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+</layout>

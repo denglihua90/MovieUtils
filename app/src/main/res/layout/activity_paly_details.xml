@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="mPalyModel"
+            type="com.dlh.movieutils.ui.page.home.playdetails.PalyDetailsViewModel" />
+
+        <variable
+            name="mSpinnerAdapter"
+            type="com.dlh.movieutils.ui.page.jx.ParserSpinnerAdapter" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        tools:context=".ui.page.home.playdetails.PalyDetailsActivity">
+
+        <LinearLayout
+            android:id="@+id/play_video_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/transparent"
+            android:orientation="vertical"
+            app:layout_constraintDimensionRatio="H,3:2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/paly_spinner"
+            adapter="@{mSpinnerAdapter}"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/wheat"
+            android:minHeight="@dimen/qb_px_48"
+            app:layout_constraintTop_toBottomOf="@+id/play_video_view" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/paly_spinner">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/paly_tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingLeft="@dimen/qb_px_20"
+                    android:paddingTop="@dimen/qb_px_10"
+                    android:text="@{mPalyModel.tvObservableField.title}"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:text="@string/title_home"
+                    />
+                <TextView
+                    android:id="@+id/paly_tv_people"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/qb_px_20"
+                    android:paddingTop="@dimen/qb_px_4"
+                    bingPeople="@{mPalyModel.tvObservableField.people}"
+                    android:textColor="@color/gray_80"
+                    android:textSize="12sp"
+                    tools:text="@string/title_home"/>
+                <TextView
+                    android:id="@+id/paly_tv_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/qb_px_20"
+                    android:paddingTop="@dimen/qb_px_4"
+                    android:text="@{mPalyModel.tvObservableField.description}"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp"
+                    tools:text="@string/title_home"
+                    />
+                <androidx.recyclerview.widget.RecyclerView
+
+                    android:id="@+id/rv_episodes"
+                    rvEpisodesDivider="@{mPalyModel.rvEpisodesDivider}"
+                    rvChannel="@{mPalyModel.tvObservableField.channelId}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    app:itemIds="@{mPalyModel.itemIds}"
+                    app:adapter="@{mPalyModel.adapter}"
+                    app:itemBinding="@{mPalyModel.itemEpsodeBinding}"
+                    app:items="@{mPalyModel.itemEpsodelist}" />
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

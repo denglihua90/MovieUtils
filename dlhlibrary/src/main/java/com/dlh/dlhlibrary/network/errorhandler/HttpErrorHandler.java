@@ -1,0 +1,28 @@
+package com.dlh.dlhlibrary.network.errorhandler;
+
+import com.blankj.utilcode.util.LogUtils;
+
+import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.rxjava3.functions.Function;
+
+/**
+ * @author: dlh
+ * @date:
+ * @description
+ * 网络错误处理
+ */
+public class HttpErrorHandler<T> implements Function<Throwable, Observable<T>> {
+
+    /**
+     * 处理以下两类网络错误：
+     * 1、http请求相关的错误，例如：404，403，socket timeout等等；
+     * 2、应用数据的错误会抛RuntimeException，最后也会走到这个函数来统一处理；
+     */
+    @Override
+    public Observable<T> apply(Throwable throwable) {
+        //通过这个异常处理，得到用户可以知道的原因
+        LogUtils.dTag("throwable",throwable.toString());
+        return Observable.error(ExceptionHandle.handleException(throwable));
+    }
+}
+

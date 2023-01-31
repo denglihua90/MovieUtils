@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="com.dlh.movieutils.bean.Epsodelist" />
+        <variable
+            name="itemEpsodelist"
+            type="com.dlh.movieutils.bean.Epsodelist" />
+
+        <variable
+            name="itemEpsodelistClick"
+            type="com.dlh.movieutils.ui.page.home.playdetails.OnEpsodelistClickListener&lt;Epsodelist&gt;" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@{itemEpsodelist.checked?@drawable/rv_item_checked_bg:@drawable/rv_item_bg}"
+        android:onClick="@{() -> itemEpsodelistClick.onEpsodelistClick(itemEpsodelist)}"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/rv_episodes_order"
+            android:layout_width="match_parent"
+            android:padding="@dimen/qb_px_12"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:ellipsize="end"
+
+            android:gravity="@{itemEpsodelist.channelId==6?0x10:0x11}"
+            tools:text="第一季"
+            android:text='@{itemEpsodelist.channelId==6?itemEpsodelist.period+" "+itemEpsodelist.shortTitle:"第"+itemEpsodelist.order+"集"}'
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

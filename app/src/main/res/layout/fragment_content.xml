@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="contentViewModel"
+            type="com.dlh.movieutils.ui.page.home.content.ContentViewModel" />
+
+
+
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <com.scwang.smart.refresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.page.home.content.ContentFragment">
+
+            <!--            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"-->
+            <!--            app:spanCount="3"-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                rvGridDividerItemDecoration="@{contentViewModel.rvGridDividerItemDecoration}"
+                app:adapter="@{contentViewModel.adapter}"
+                app:items="@{contentViewModel.items}"
+                app:itemBinding="@{contentViewModel.itemBinding}"
+
+                android:background="#fff" />
+
+        </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

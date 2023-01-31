@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ExtraTranslation">
+    <string name="app_name">看片助手</string>
+
+    <string name="btn_text_paste" >粘贴地址</string>
+    <string name="btn_text_play" >解析地址</string>
+
+    <string name="title_home" >首页</string>
+    <string name="title_jxpaly" >解析</string>
+    <string name="title_me" >我的</string>
+    <string name="title_paly_details">播放</string>
+
+
+    <string name="text_movie_source">播放源</string>
+    <string name="text_movie_episodes">选集</string>
+
+
+    <string-array name="tabsArray">
+        <item>电视剧</item>
+        <item>电影</item>
+        <item>动漫</item>
+        <item>综艺</item>
+    </string-array>
+</resources>
